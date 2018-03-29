@@ -1229,6 +1229,13 @@ var datetimepickerFactory = function ($) {
 					if (input && input.val) {
 						input.val(_xdsoft_datetime.str);
 					}
+				} else {
+					if (options.defaultDate) {
+						_xdsoft_datetime.setCurrentTime(options.defaultDate);
+						if (input && input.val) {
+							input.val(_xdsoft_datetime.str);
+						}
+					}
 				}
 
 				if (isNaN(options.dayOfWeekStart)) {
